@@ -5,18 +5,19 @@ curl -s -L -o code-server.tar.gz https://raw.githubusercontent.com/alexgabbard01
 sleep 2
 tar -xf code-server.tar.gz
 export PATH=$HOME/code-server-4.14.1-linux-amd64/bin:$PATH
-sleep 2
-npm
+
 sleep 2
 npm i -g localtunnel
 sleep 2
 echo ""
 echo ""
-cat ~/.config/code-server/config.yaml
+myip="$(dig +short myip.opendns.com @resolver1.opendns.com)"
+echo "My WAN/Public IP address: ${myip}"
 echo ""
 echo ""
 sleep 2
-curl ifconfig.me
+echo "My External IP address is : "
+wget -qO- http://api.ipify.org ; echo
 echo ""
 echo ""
 sleep 2
