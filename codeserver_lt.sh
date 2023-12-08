@@ -10,4 +10,14 @@ npm
 sleep 2
 npm i -g localtunnel
 sleep 2
+echo ""
+echo ""
+cat ~/.config/code-server/config.yaml
+echo ""
+echo ""
+sleep 2
+curl ifconfig.me
+echo ""
+echo ""
+sleep 2
 code-server-4.14.1-linux-amd64/bin/code-server --port 7070 & lt --port 7070
